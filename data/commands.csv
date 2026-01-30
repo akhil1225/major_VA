@@ -1,0 +1,126 @@
+sentence,intent
+create file,CREATE_FILE
+create a file,CREATE_FILE
+make a file,CREATE_FILE
+add a file,CREATE_FILE
+generate a file,CREATE_FILE
+new file,CREATE_FILE
+open a new file,CREATE_FILE
+create text file,CREATE_FILE
+make document file,CREATE_FILE
+produce a file,CREATE_FILE
+create file named test,CREATE_FILE
+make a file called demo,CREATE_FILE
+can you create a file,CREATE_FILE
+please create a file,CREATE_FILE
+create a new file,CREATE_FILE
+make me a file,CREATE_FILE
+i want a file,CREATE_FILE
+build a file,CREATE_FILE
+create a python file,CREATE_FILE
+create a file here,CREATE_FILE
+create file in this folder,CREATE_FILE
+make file in this directory,CREATE_FILE
+generate file here,CREATE_FILE
+create file for me,CREATE_FILE
+create file now,CREATE_FILE
+please make a file,CREATE_FILE
+add new file,CREATE_FILE
+create blank file,CREATE_FILE
+create empty file,CREATE_FILE
+start a new file,CREATE_FILE
+
+create folder,CREATE_FOLDER
+create a folder,CREATE_FOLDER
+make a folder,CREATE_FOLDER
+new folder,CREATE_FOLDER
+create directory,CREATE_FOLDER
+make directory,CREATE_FOLDER
+add a folder,CREATE_FOLDER
+generate folder,CREATE_FOLDER
+open new folder,CREATE_FOLDER
+create a directory,CREATE_FOLDER
+create folder named data,CREATE_FOLDER
+make a folder called project,CREATE_FOLDER
+can you create a folder,CREATE_FOLDER
+please create a folder,CREATE_FOLDER
+create a new folder,CREATE_FOLDER
+make me a folder,CREATE_FOLDER
+i want a folder,CREATE_FOLDER
+build a folder,CREATE_FOLDER
+create folder here,CREATE_FOLDER
+create folder in this path,CREATE_FOLDER
+make directory here,CREATE_FOLDER
+generate directory,CREATE_FOLDER
+create a subfolder,CREATE_FOLDER
+add new folder,CREATE_FOLDER
+create empty folder,CREATE_FOLDER
+create blank folder,CREATE_FOLDER
+start a new folder,CREATE_FOLDER
+make a new directory,CREATE_FOLDER
+create project folder,CREATE_FOLDER
+create working folder,CREATE_FOLDER
+
+delete file,DELETE_FILE
+remove file,DELETE_FILE
+erase file,DELETE_FILE
+destroy file,DELETE_FILE
+delete this file,DELETE_FILE
+remove the file,DELETE_FILE
+clear file,DELETE_FILE
+drop file,DELETE_FILE
+can you delete this file,DELETE_FILE
+please delete the file,DELETE_FILE
+remove a file,DELETE_FILE
+delete a file,DELETE_FILE
+erase a file,DELETE_FILE
+get rid of this file,DELETE_FILE
+trash this file,DELETE_FILE
+wipe the file,DELETE_FILE
+delete file here,DELETE_FILE
+remove file from folder,DELETE_FILE
+delete selected file,DELETE_FILE
+delete unwanted file,DELETE_FILE
+
+delete folder,DELETE_FOLDER
+remove folder,DELETE_FOLDER
+erase folder,DELETE_FOLDER
+destroy folder,DELETE_FOLDER
+delete this folder,DELETE_FOLDER
+remove the folder,DELETE_FOLDER
+clear folder,DELETE_FOLDER
+drop folder,DELETE_FOLDER
+can you delete this folder,DELETE_FOLDER
+please delete the folder,DELETE_FOLDER
+remove a folder,DELETE_FOLDER
+delete a folder,DELETE_FOLDER
+erase a directory,DELETE_FOLDER
+get rid of this folder,DELETE_FOLDER
+trash this folder,DELETE_FOLDER
+wipe the folder,DELETE_FOLDER
+delete folder here,DELETE_FOLDER
+remove folder from path,DELETE_FOLDER
+delete selected folder,DELETE_FOLDER
+delete unwanted folder,DELETE_FOLDER
+
+list files,LIST_FILES
+show files,LIST_FILES
+display files,LIST_FILES
+what files are here,LIST_FILES
+show all files,LIST_FILES
+list everything,LIST_FILES
+list items,LIST_FILES
+show directory contents,LIST_FILES
+what is in this folder,LIST_FILES
+display directory,LIST_FILES
+show me the files,LIST_FILES
+list current files,LIST_FILES
+list files here,LIST_FILES
+what is inside,LIST_FILES
+show contents,LIST_FILES
+print files,LIST_FILES
+view files,LIST_FILES
+show folder contents,LIST_FILES
+list directory,LIST_FILES
+list all items,LIST_FILES
+
