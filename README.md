@@ -49,10 +49,9 @@ Open a terminal in the extracted folder
 Then Create a venv -> virtual environment in the folder 
 
 python -m venv venv
+
 venv\Scripts\activate
 
-python3 -m venv venv
-source venv/bin/activate
 
 ---
 
