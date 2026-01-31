@@ -7,7 +7,7 @@ The project is designed with a modular and extensible architecture, making it su
 
 ---
 
-## ✨ Features
+## Features
 
 - Voice and text-based command input  
 - NLP-based intent recognition using a trained ML model  
@@ -19,7 +19,7 @@ The project is designed with a modular and extensible architecture, making it su
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 - Python 3.9 or higher  
 - Git (optional, for cloning)  
@@ -27,7 +27,7 @@ The project is designed with a modular and extensible architecture, making it su
 
 ---
 
-## 📥 Getting the Project
+## Getting the Project
 
 ### Option 1: Clone Using Git
 
@@ -44,7 +44,7 @@ Open a terminal in the extracted folder
 
 ---
 
-## 🧪 Create a Virtual Environment
+## Create a Virtual Environment
 
 Create a virtual environment inside the project folder:
 
@@ -56,7 +56,7 @@ venv\Scripts\activate
 
 ---
 
-## 📦 Install Required Dependencies
+## Install Required Dependencies
 
 Install all required packages using the requirements.txt file:
 
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 Train the NLP Model
+## Train the NLP Model
 
 The NLP intent classification model must be retrained every time the dataset is changed or the model architecture is modified.
 
@@ -72,7 +72,7 @@ python core/train_intent_model.py
 
 ---
 
-## ▶️ Run the Application
+## Run the Application
 
 Start the intelligent agent by running:
 
