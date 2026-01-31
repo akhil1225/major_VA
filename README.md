@@ -1,9 +1,9 @@
-# An NLP-Based Intelligent Agent for System Automation
+# 🧠 An NLP-Based Intelligent Agent for System Automation
 
-This repository contains the implementation of an **NLP-driven intelligent voice-based agent** that enables users to automate system-level tasks using natural language through **voice or text commands**.  
-The system integrates **Speech Recognition, Natural Language Processing (NLP), and Machine Learning–based intent classification** to interpret commands and perform actions such as file manipulation and basic system automation.
+This repository contains the implementation of an NLP-driven intelligent voice-based agent that enables users to automate system-level tasks using natural language through voice or text commands.  
+The system integrates Speech Recognition, Natural Language Processing (NLP), and Machine Learning–based intent classification to interpret commands and perform actions such as file manipulation and basic system automation.
 
-The project is designed with a **modular and extensible architecture**, making it suitable for academic use, experimentation, and future enhancements.
+The project is designed with a modular and extensible architecture, making it suitable for academic use, experimentation, and future enhancements.
 
 ---
 
@@ -17,15 +17,13 @@ The project is designed with a **modular and extensible architecture**, making i
 - Modular architecture (UI, NLP, control, skills)  
 - Offline-capable core functionality  
 
-
-
 ---
 
 ## 🔧 Prerequisites
 
-- **Python 3.9 or higher**
-- Git (optional, for cloning)
-- A working microphone (for voice commands)
+- Python 3.9 or higher  
+- Git (optional, for cloning)  
+- A working microphone (for voice commands)  
 
 ---
 
@@ -33,38 +31,51 @@ The project is designed with a **modular and extensible architecture**, making i
 
 ### Option 1: Clone Using Git
 
-
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/<your-username>/<your-repo-name>.git  
 cd <your-repo-name>
 
-Option 2: Download as ZIP
+---
 
-Click Code → Download ZIP on the GitHub repository page
+### Option 2: Download as ZIP
 
-Extract the ZIP file
-
-Open a terminal in the extracted folder
-
-
-Then Create a venv -> virtual environment in the folder 
-
-python -m venv venv
-
-venv\Scripts\activate
-
+Click Code → Download ZIP on the GitHub repository page  
+Extract the ZIP file  
+Open a terminal in the extracted folder  
 
 ---
 
-# Install Required dependencies
+## 🧪 Create a Virtual Environment
 
-pip install -r requirements.txt
+Create a virtual environment inside the project folder:
 
-# First, train the NLP Model, has to be trained everytime the dataset has been changed or the model has been modified
+python -m venv venv  
 
-python core/train_intent_model.py
+Activate the virtual environment:
+
+venv\Scripts\activate  
 
 ---
 
-# Run the application
+## 📦 Install Required Dependencies
 
-python main.py
+Install all required packages using the requirements.txt file:
+
+pip install -r requirements.txt  
+
+---
+
+## 🧠 Train the NLP Model
+
+The NLP intent classification model must be retrained every time the dataset is changed or the model architecture is modified.
+
+python core/train_intent_model.py  
+
+---
+
+## ▶️ Run the Application
+
+Start the intelligent agent by running:
+
+python main.py  
+
+---
