@@ -124,3 +124,604 @@ show folder contents,LIST_FILES
 list directory,LIST_FILES
 list all items,LIST_FILES
 
+go into the folder,NAVIGATE_IN
+open the folder,NAVIGATE_IN
+move into the folder,NAVIGATE_IN
+change directory to this folder,NAVIGATE_IN
+enter the folder,NAVIGATE_IN
+navigate into this folder,NAVIGATE_IN
+take me inside the folder,NAVIGATE_IN
+open this directory,NAVIGATE_IN
+step into the folder,NAVIGATE_IN
+access the folder,NAVIGATE_IN
+go inside this directory,NAVIGATE_IN
+move forward into the folder,NAVIGATE_IN
+switch to this folder,NAVIGATE_IN
+open the selected folder,NAVIGATE_IN
+enter the selected directory,NAVIGATE_IN
+navigate forward into the folder,NAVIGATE_IN
+drill down into the folder,NAVIGATE_IN
+go one level deeper,NAVIGATE_IN
+move down into this folder,NAVIGATE_IN
+load the contents of this folder,NAVIGATE_IN
+open the current folder,NAVIGATE_IN
+go to this subfolder,NAVIGATE_IN
+enter the subdirectory,NAVIGATE_IN
+change location to this folder,NAVIGATE_IN
+navigate inside the directory,NAVIGATE_IN
+
+
+go back,NAVIGATE_OUT
+move back,NAVIGATE_OUT
+go to the parent folder,NAVIGATE_OUT
+navigate back,NAVIGATE_OUT
+go up one level,NAVIGATE_OUT
+move to the previous folder,NAVIGATE_OUT
+return to the parent directory,NAVIGATE_OUT
+step back from this folder,NAVIGATE_OUT
+exit this folder,NAVIGATE_OUT
+go out of the folder,NAVIGATE_OUT
+navigate to the previous directory,NAVIGATE_OUT
+move up in the directory,NAVIGATE_OUT
+go back to where I was,NAVIGATE_OUT
+return to the last folder,NAVIGATE_OUT
+back to the parent,NAVIGATE_OUT
+move one level up,NAVIGATE_OUT
+leave this directory,NAVIGATE_OUT
+navigate upward,NAVIGATE_OUT
+exit the current folder,NAVIGATE_OUT
+go back to the main folder,NAVIGATE_OUT
+return to the higher directory,NAVIGATE_OUT
+step out of this directory,NAVIGATE_OUT
+back to the previous location,NAVIGATE_OUT
+change directory to parent,NAVIGATE_OUT
+
+open application,OPEN_APPLICATION
+open the application,OPEN_APPLICATION
+open an application,OPEN_APPLICATION
+open app,OPEN_APPLICATION
+open the app,OPEN_APPLICATION
+start application,OPEN_APPLICATION
+start the application,OPEN_APPLICATION
+start an app,OPEN_APPLICATION
+launch application,OPEN_APPLICATION
+launch the application,OPEN_APPLICATION
+launch an app,OPEN_APPLICATION
+run application,OPEN_APPLICATION
+run the application,OPEN_APPLICATION
+run an app,OPEN_APPLICATION
+can you open the application,OPEN_APPLICATION
+please open the app,OPEN_APPLICATION
+could you start the application,OPEN_APPLICATION
+please launch the application,OPEN_APPLICATION
+open a program,OPEN_APPLICATION
+start a program,OPEN_APPLICATION
+launch a program,OPEN_APPLICATION
+run a program,OPEN_APPLICATION
+can you run the app,OPEN_APPLICATION
+please start the program,OPEN_APPLICATION
+open the program for me,OPEN_APPLICATION
+
+open application,OPEN_APPLICATION
+open the application,OPEN_APPLICATION
+open an application,OPEN_APPLICATION
+open app,OPEN_APPLICATION
+open the app,OPEN_APPLICATION
+start application,OPEN_APPLICATION
+start the application,OPEN_APPLICATION
+start an app,OPEN_APPLICATION
+launch application,OPEN_APPLICATION
+launch the application,OPEN_APPLICATION
+launch an app,OPEN_APPLICATION
+run application,OPEN_APPLICATION
+run the application,OPEN_APPLICATION
+run an app,OPEN_APPLICATION
+can you open the application,OPEN_APPLICATION
+please open the app,OPEN_APPLICATION
+could you start the application,OPEN_APPLICATION
+please launch the application,OPEN_APPLICATION
+open a program,OPEN_APPLICATION
+start a program,OPEN_APPLICATION
+launch a program,OPEN_APPLICATION
+run a program,OPEN_APPLICATION
+can you run the app,OPEN_APPLICATION
+please start the program,OPEN_APPLICATION
+open the program for me,OPEN_APPLICATION
+
+open application,OPEN_APPLICATION
+open the application,OPEN_APPLICATION
+open an application,OPEN_APPLICATION
+open app,OPEN_APPLICATION
+open the app,OPEN_APPLICATION
+start application,OPEN_APPLICATION
+start the application,OPEN_APPLICATION
+start an app,OPEN_APPLICATION
+launch application,OPEN_APPLICATION
+launch the application,OPEN_APPLICATION
+launch an app,OPEN_APPLICATION
+run application,OPEN_APPLICATION
+run the application,OPEN_APPLICATION
+run an app,OPEN_APPLICATION
+can you open the application,OPEN_APPLICATION
+please open the app,OPEN_APPLICATION
+could you start the application,OPEN_APPLICATION
+please launch the application,OPEN_APPLICATION
+open a program,OPEN_APPLICATION
+start a program,OPEN_APPLICATION
+launch a program,OPEN_APPLICATION
+run a program,OPEN_APPLICATION
+can you run the app,OPEN_APPLICATION
+please start the program,OPEN_APPLICATION
+open the program for me,OPEN_APPLICATION
+
+close application,CLOSE_APPLICATION
+close the application,CLOSE_APPLICATION
+close an application,CLOSE_APPLICATION
+close app,CLOSE_APPLICATION
+close the app,CLOSE_APPLICATION
+exit application,CLOSE_APPLICATION
+exit the application,CLOSE_APPLICATION
+exit an app,CLOSE_APPLICATION
+terminate application,CLOSE_APPLICATION
+terminate the application,CLOSE_APPLICATION
+kill application,CLOSE_APPLICATION
+kill the application,CLOSE_APPLICATION
+stop application,CLOSE_APPLICATION
+stop the application,CLOSE_APPLICATION
+can you close the application,CLOSE_APPLICATION
+please close the app,CLOSE_APPLICATION
+could you exit the application,CLOSE_APPLICATION
+please terminate the application,CLOSE_APPLICATION
+close a program,CLOSE_APPLICATION
+exit a program,CLOSE_APPLICATION
+terminate a program,CLOSE_APPLICATION
+kill a program,CLOSE_APPLICATION
+stop the program,CLOSE_APPLICATION
+please close the program,CLOSE_APPLICATION
+shut down the application,CLOSE_APPLICATION
+
+list installed applications,LIST_INSTALLED_APPLICATIONS
+list installed apps,LIST_INSTALLED_APPLICATIONS
+show installed applications,LIST_INSTALLED_APPLICATIONS
+show installed apps,LIST_INSTALLED_APPLICATIONS
+display installed applications,LIST_INSTALLED_APPLICATIONS
+display installed apps,LIST_INSTALLED_APPLICATIONS
+what applications are installed,LIST_INSTALLED_APPLICATIONS
+what apps are installed on this system,LIST_INSTALLED_APPLICATIONS
+tell me the installed applications,LIST_INSTALLED_APPLICATIONS
+tell me which apps are installed,LIST_INSTALLED_APPLICATIONS
+show me all installed applications,LIST_INSTALLED_APPLICATIONS
+show me all installed apps,LIST_INSTALLED_APPLICATIONS
+list all installed applications,LIST_INSTALLED_APPLICATIONS
+list all installed apps,LIST_INSTALLED_APPLICATIONS
+give me the list of installed applications,LIST_INSTALLED_APPLICATIONS
+which applications are installed here,LIST_INSTALLED_APPLICATIONS
+what software is installed on this computer,LIST_INSTALLED_APPLICATIONS
+show installed software,LIST_INSTALLED_APPLICATIONS
+list installed software,LIST_INSTALLED_APPLICATIONS
+display installed software,LIST_INSTALLED_APPLICATIONS
+can you show installed applications,LIST_INSTALLED_APPLICATIONS
+can you list installed apps,LIST_INSTALLED_APPLICATIONS
+i want to see installed applications,LIST_INSTALLED_APPLICATIONS
+show the apps installed on my system,LIST_INSTALLED_APPLICATIONS
+what programs are installed on my computer,LIST_INSTALLED_APPLICATIONS
+
+
+what is my system status,SYSTEM_STATUS
+tell me the system status,SYSTEM_STATUS
+how is my system,SYSTEM_STATUS
+check system status,SYSTEM_STATUS
+system health status,SYSTEM_STATUS
+is my system running fine,SYSTEM_STATUS
+give me system status,SYSTEM_STATUS
+show system status,SYSTEM_STATUS
+how is my computer doing,SYSTEM_STATUS
+what is the current system condition,SYSTEM_STATUS
+is everything okay with my system,SYSTEM_STATUS
+check overall system status,SYSTEM_STATUS
+how is my laptop working,SYSTEM_STATUS
+is my pc healthy,SYSTEM_STATUS
+system condition check,SYSTEM_STATUS
+tell me how my system is,SYSTEM_STATUS
+what’s going on with my system,SYSTEM_STATUS
+system status report,SYSTEM_STATUS
+check my system health,SYSTEM_STATUS
+how is my machine performing,SYSTEM_STATUS
+is my system okay right now,SYSTEM_STATUS
+current system health,SYSTEM_STATUS
+analyze system status,SYSTEM_STATUS
+give me a system overview,SYSTEM_STATUS
+how is my system right now,SYSTEM_STATUS
+
+
+what is my battery status,BATTERY_STATUS
+is my battery low,BATTERY_STATUS
+battery level status,BATTERY_STATUS
+how much battery is left,BATTERY_STATUS
+check battery status,BATTERY_STATUS
+tell me my battery level,BATTERY_STATUS
+is my laptop charging,BATTERY_STATUS
+battery percentage,BATTERY_STATUS
+show battery status,BATTERY_STATUS
+how is my battery,BATTERY_STATUS
+is my battery running low,BATTERY_STATUS
+check battery level,BATTERY_STATUS
+what percent is my battery,BATTERY_STATUS
+battery health status,BATTERY_STATUS
+how much charge do i have,BATTERY_STATUS
+is my charger connected,BATTERY_STATUS
+tell me battery condition,BATTERY_STATUS
+battery status check,BATTERY_STATUS
+am i on battery power,BATTERY_STATUS
+is my battery okay,BATTERY_STATUS
+current battery level,BATTERY_STATUS
+battery remaining percentage,BATTERY_STATUS
+is my battery critical,BATTERY_STATUS
+battery charging status,BATTERY_STATUS
+how long will my battery last,BATTERY_STATUS
+
+
+how is my system performance,PERFORMANCE_STATUS
+is my system under load,PERFORMANCE_STATUS
+check cpu usage,PERFORMANCE_STATUS
+check memory usage,PERFORMANCE_STATUS
+is my system slow,PERFORMANCE_STATUS
+how busy is my system,PERFORMANCE_STATUS
+system performance status,PERFORMANCE_STATUS
+check system performance,PERFORMANCE_STATUS
+how much cpu is being used,PERFORMANCE_STATUS
+how much ram is being used,PERFORMANCE_STATUS
+current cpu usage,PERFORMANCE_STATUS
+current memory usage,PERFORMANCE_STATUS
+is my system overloaded,PERFORMANCE_STATUS
+performance check,PERFORMANCE_STATUS
+is my pc lagging,PERFORMANCE_STATUS
+system load status,PERFORMANCE_STATUS
+how heavy is system usage,PERFORMANCE_STATUS
+check system load,PERFORMANCE_STATUS
+tell me cpu and ram usage,PERFORMANCE_STATUS
+is my system working hard,PERFORMANCE_STATUS
+performance overview,PERFORMANCE_STATUS
+analyze system performance,PERFORMANCE_STATUS
+how stressed is my system,PERFORMANCE_STATUS
+is my computer under stress,PERFORMANCE_STATUS
+current system performance,SYSTEM_STATUS
+
+
+am i connected to the internet,NETWORK_STATUS
+is the internet working,NETWORK_STATUS
+network status,NETWORK_STATUS
+am i online,NETWORK_STATUS
+is my system offline,NETWORK_STATUS
+check internet connection,NETWORK_STATUS
+do i have internet access,NETWORK_STATUS
+is my wifi connected,NETWORK_STATUS
+internet connection status,NETWORK_STATUS
+network connectivity check,NETWORK_STATUS
+am i disconnected from the internet,NETWORK_STATUS
+is my network working,NETWORK_STATUS
+check network status,NETWORK_STATUS
+internet status check,NETWORK_STATUS
+is my computer online,NETWORK_STATUS
+is there an internet connection,NETWORK_STATUS
+wifi status,NETWORK_STATUS
+network connection status,NETWORK_STATUS
+am i connected to wifi,NETWORK_STATUS
+is my network down,NETWORK_STATUS
+t   ell me network status,NETWORK_STATUS
+is internet available,NETWORK_STATUS
+online or offline status,NETWORK_STATUS
+check connectivity,NETWORK_STATUS
+is my pc connected to the internet,NETWORK_STATUS
+
+what time is it,GET_TIME
+tell me the time,GET_TIME
+current time please,GET_TIME
+can you tell the time,GET_TIME
+what is the time now,GET_TIME
+give me the current time,GET_TIME
+time please,GET_TIME
+tell me current time,GET_TIME
+what time do we have,GET_TIME
+what's the time,GET_TIME
+do you know the time,GET_TIME
+show me the time,GET_TIME
+say the time,GET_TIME
+time now,GET_TIME
+what is the exact time,GET_TIME
+tell time,GET_TIME
+current time now,GET_TIME
+can you say the time,GET_TIME
+what time is it now,GET_TIME
+please tell the time,GET_TIME
+give me time,GET_TIME
+time information,GET_TIME
+i want the time,GET_TIME
+tell me time now,GET_TIME
+what time are we at,GET_TIME
+
+what is the date,GET_DATE
+tell me the date,GET_DATE
+what date is today,GET_DATE
+today's date,GET_DATE
+current date please,GET_DATE
+can you tell the date,GET_DATE
+what day is today,GET_DATE
+tell me today's date,GET_DATE
+date today,GET_DATE
+what is today's date,GET_DATE
+give me the date,GET_DATE
+what is the current date,GET_DATE
+date now,GET_DATE
+say the date,GET_DATE
+tell date,GET_DATE
+today date please,GET_DATE
+what date are we on,GET_DATE
+show today's date,GET_DATE
+date information,GET_DATE
+i want the date,GET_DATE
+what's the date today,GET_DATE
+tell me the date now,GET_DATE
+current day and date,GET_DATE
+what is the day today,GET_DATE
+which date is it today,GET_DATE
+
+set volume to 10,SET_VOLUME
+set volume to 20,SET_VOLUME
+set volume to 30,SET_VOLUME
+set volume to 40,SET_VOLUME
+set volume to 50,SET_VOLUME
+set volume to 60,SET_VOLUME
+set volume to 70,SET_VOLUME
+set volume to 80,SET_VOLUME
+set volume to 90,SET_VOLUME
+set volume to 100,SET_VOLUME
+change volume to 25,SET_VOLUME
+change volume to 45,SET_VOLUME
+change volume to 65,SET_VOLUME
+adjust volume to 35,SET_VOLUME
+adjust volume to 55,SET_VOLUME
+adjust volume to 75,SET_VOLUME
+volume to 20,SET_VOLUME
+volume 40,SET_VOLUME
+make volume 60,SET_VOLUME
+keep volume at 50,SET_VOLUME
+set system volume to 30,SET_VOLUME
+set audio volume to 70,SET_VOLUME
+lower volume to 40,SET_VOLUME
+raise volume to 80,SET_VOLUME
+fix volume at 50,SET_VOLUME
+
+increase volume,INCREASE_VOLUME
+turn volume up,INCREASE_VOLUME
+raise the volume,INCREASE_VOLUME
+increase the sound,INCREASE_VOLUME
+make it louder,INCREASE_VOLUME
+volume up,INCREASE_VOLUME
+boost the volume,INCREASE_VOLUME
+increase audio,INCREASE_VOLUME
+increase system volume,INCREASE_VOLUME
+turn sound up,INCREASE_VOLUME
+louder please,INCREASE_VOLUME
+increase volume now,INCREASE_VOLUME
+raise audio level,INCREASE_VOLUME
+increase speaker volume,INCREASE_VOLUME
+increase output volume,INCREASE_VOLUME
+increase volume a bit,INCREASE_VOLUME
+increase volume slightly,INCREASE_VOLUME
+increase volume more,INCREASE_VOLUME
+push volume up,INCREASE_VOLUME
+increase volume level,INCREASE_VOLUME
+increase the volume now,INCREASE_VOLUME
+turn volume higher,INCREASE_VOLUME
+make volume louder,INCREASE_VOLUME
+increase master volume,INCREASE_VOLUME
+increase sound output,INCREASE_VOLUME
+
+decrease volume,DECREASE_VOLUME
+turn volume down,DECREASE_VOLUME
+lower the volume,DECREASE_VOLUME
+reduce volume,DECREASE_VOLUME
+make it quieter,DECREASE_VOLUME
+volume down,DECREASE_VOLUME
+reduce the sound,DECREASE_VOLUME
+decrease audio,DECREASE_VOLUME
+lower system volume,DECREASE_VOLUME
+turn sound down,DECREASE_VOLUME
+quieter please,DECREASE_VOLUME
+decrease volume now,DECREASE_VOLUME
+lower audio level,DECREASE_VOLUME
+decrease speaker volume,DECREASE_VOLUME
+reduce output volume,DECREASE_VOLUME
+decrease volume a bit,DECREASE_VOLUME
+decrease volume slightly,DECREASE_VOLUME
+decrease volume more,DECREASE_VOLUME
+pull volume down,DECREASE_VOLUME
+reduce volume level,DECREASE_VOLUME
+decrease the volume now,DECREASE_VOLUME
+turn volume lower,DECREASE_VOLUME
+make volume quieter,DECREASE_VOLUME
+decrease master volume,DECREASE_VOLUME
+reduce sound output,DECREASE_VOLUME
+
+mute volume,MUTE_VOLUME
+mute the sound,MUTE_VOLUME
+mute audio,MUTE_VOLUME
+mute system,MUTE_VOLUME
+mute speakers,MUTE_VOLUME
+silence the volume,MUTE_VOLUME
+turn off sound,MUTE_VOLUME
+turn sound off,MUTE_VOLUME
+mute everything,MUTE_VOLUME
+mute output,MUTE_VOLUME
+mute system sound,MUTE_VOLUME
+mute audio output,MUTE_VOLUME
+silence system,MUTE_VOLUME
+silence audio,MUTE_VOLUME
+mute the system volume,MUTE_VOLUME
+mute my speakers,MUTE_VOLUME
+mute now,MUTE_VOLUME
+mute please,MUTE_VOLUME
+kill the sound,MUTE_VOLUME
+disable sound,MUTE_VOLUME
+disable audio,MUTE_VOLUME
+silence speakers,MUTE_VOLUME
+mute sound output,MUTE_VOLUME
+mute master volume,MUTE_VOLUME
+turn audio off,MUTE_VOLUME
+
+unmute volume,UNMUTE_VOLUME
+unmute sound,UNMUTE_VOLUME
+unmute audio,UNMUTE_VOLUME
+unmute system,UNMUTE_VOLUME
+unmute speakers,UNMUTE_VOLUME
+turn sound on,UNMUTE_VOLUME
+enable sound,UNMUTE_VOLUME
+restore sound,UNMUTE_VOLUME
+restore audio,UNMUTE_VOLUME
+unmute output,UNMUTE_VOLUME
+unmute system sound,UNMUTE_VOLUME
+unmute audio output,UNMUTE_VOLUME
+enable audio,UNMUTE_VOLUME
+enable speakers,UNMUTE_VOLUME
+turn audio back on,UNMUTE_VOLUME
+unmute now,UNMUTE_VOLUME
+unmute please,UNMUTE_VOLUME
+bring sound back,UNMUTE_VOLUME
+resume sound,UNMUTE_VOLUME
+resume audio,UNMUTE_VOLUME
+restore volume,UNMUTE_VOLUME
+enable system volume,UNMUTE_VOLUME
+unmute master volume,UNMUTE_VOLUME
+turn speakers on,UNMUTE_VOLUME
+sound back on,UNMUTE_VOLUME
+
+shutdown system,SHUTDOWN_SYSTEM
+shut down system,SHUTDOWN_SYSTEM
+shutdown computer,SHUTDOWN_SYSTEM
+turn off computer,SHUTDOWN_SYSTEM
+power off system,SHUTDOWN_SYSTEM
+turn off system,SHUTDOWN_SYSTEM
+shutdown pc,SHUTDOWN_SYSTEM
+switch off computer,SHUTDOWN_SYSTEM
+power down system,SHUTDOWN_SYSTEM
+shutdown the machine,SHUTDOWN_SYSTEM
+turn the computer off,SHUTDOWN_SYSTEM
+shut down the pc,SHUTDOWN_SYSTEM
+stop the system,SHUTDOWN_SYSTEM
+end system session,SHUTDOWN_SYSTEM
+shutdown this computer,SHUTDOWN_SYSTEM
+shutdown now,SHUTDOWN_SYSTEM
+turn system off now,SHUTDOWN_SYSTEM
+shutdown immediately,SHUTDOWN_SYSTEM
+power off now,SHUTDOWN_SYSTEM
+shutdown my computer,SHUTDOWN_SYSTEM
+shutdown the system now,SHUTDOWN_SYSTEM
+turn off my pc,SHUTDOWN_SYSTEM
+power off computer,SHUTDOWN_SYSTEM
+shut this system down,SHUTDOWN_SYSTEM
+shutdown device,SHUTDOWN_SYSTEM
+
+restart system,RESTART_SYSTEM
+restart computer,RESTART_SYSTEM
+restart pc,RESTART_SYSTEM
+reboot system,RESTART_SYSTEM
+reboot computer,RESTART_SYSTEM
+restart the machine,RESTART_SYSTEM
+restart now,RESTART_SYSTEM
+restart this computer,RESTART_SYSTEM
+reboot now,RESTART_SYSTEM
+restart my pc,RESTART_SYSTEM
+restart the system now,RESTART_SYSTEM
+restart device,RESTART_SYSTEM
+restart the computer,RESTART_SYSTEM
+restart everything,RESTART_SYSTEM
+reboot the system,RESTART_SYSTEM
+reboot pc,RESTART_SYSTEM
+restart operating system,RESTART_SYSTEM
+restart windows,RESTART_SYSTEM
+restart this system,RESTART_SYSTEM
+restart system immediately,RESTART_SYSTEM
+reboot machine,RESTART_SYSTEM
+restart the device,RESTART_SYSTEM
+restart laptop,RESTART_SYSTEM
+restart workstation,RESTART_SYSTEM
+restart the pc now,RESTART_SYSTEM
+
+sleep system,SLEEP_SYSTEM
+put system to sleep,SLEEP_SYSTEM
+sleep computer,SLEEP_SYSTEM
+sleep pc,SLEEP_SYSTEM
+go to sleep,SLEEP_SYSTEM
+enter sleep mode,SLEEP_SYSTEM
+put computer to sleep,SLEEP_SYSTEM
+sleep now,SLEEP_SYSTEM
+sleep this system,SLEEP_SYSTEM
+sleep the computer,SLEEP_SYSTEM
+sleep the pc,SLEEP_SYSTEM
+put pc to sleep,SLEEP_SYSTEM
+put device to sleep,SLEEP_SYSTEM
+sleep machine,SLEEP_SYSTEM
+sleep the system now,SLEEP_SYSTEM
+activate sleep mode,SLEEP_SYSTEM
+enable sleep,SLEEP_SYSTEM
+sleep laptop,SLEEP_SYSTEM
+sleep workstation,SLEEP_SYSTEM
+suspend system,SLEEP_SYSTEM
+suspend computer,SLEEP_SYSTEM
+enter suspend mode,SLEEP_SYSTEM
+system sleep,SLEEP_SYSTEM
+go into sleep,SLEEP_SYSTEM
+sleep the device,SLEEP_SYSTEM
+
+set alarm at 6,SET_ALARM
+set alarm at 7,SET_ALARM
+set alarm at 8,SET_ALARM
+set alarm at 9,SET_ALARM
+set alarm at 10,SET_ALARM
+set alarm at 6 30,SET_ALARM
+set alarm at 7 15,SET_ALARM
+set alarm at 8 45,SET_ALARM
+set alarm at 9 10,SET_ALARM
+set alarm at 10 50,SET_ALARM
+alarm at 6,SET_ALARM
+alarm at 7,SET_ALARM
+alarm at 8,SET_ALARM
+alarm at 9,SET_ALARM
+alarm at 10,SET_ALARM
+alarm for 6 30,SET_ALARM
+alarm for 7 15,SET_ALARM
+alarm for 8 45,SET_ALARM
+alarm for 9 10,SET_ALARM
+alarm for 10 50,SET_ALARM
+create alarm at 6,SET_ALARM
+create alarm at 7,SET_ALARM
+create alarm at 8 30,SET_ALARM
+schedule alarm at 9 45,SET_ALARM
+add alarm at 10 15,SET_ALARM
+
+list alarms,LIST_ALARMS
+show alarms,LIST_ALARMS
+what alarms are set,LIST_ALARMS
+tell me my alarms,LIST_ALARMS
+display alarms,LIST_ALARMS
+show active alarms,LIST_ALARMS
+list active alarms,LIST_ALARMS
+what alarms do i have,LIST_ALARMS
+show alarm list,LIST_ALARMS
+check alarms,LIST_ALARMS
+see alarms,LIST_ALARMS
+view alarms,LIST_ALARMS
+read alarms,LIST_ALARMS
+alarm list,LIST_ALARMS
+alarms list,LIST_ALARMS
+current alarms,LIST_ALARMS
+pending alarms,LIST_ALARMS
+what alarms exist,LIST_ALARMS
+tell alarms,LIST_ALARMS
+display alarm list,LIST_ALARMS
+show all alarms,LIST_ALARMS
+list my alarms,LIST_ALARMS
+what are my alarms,LIST_ALARMS
+alarms status,LIST_ALARMS
+alarm status,LIST_ALARMS

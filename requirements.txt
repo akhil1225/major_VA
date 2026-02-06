@@ -8,3 +8,8 @@ psutil
 pyttsx3
 pandas
 PySide6
+tensorflow
+psutil
+fastapi
+uvicorn
+python-multipart
