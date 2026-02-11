@@ -122,20 +122,26 @@ def close_application(query: str) -> str:
 
 
 def list_installed_applications():
-    apps = _discovery.get_installed_apps()
+    try:
+        apps = _discovery.get_installed_apps()
+    except Exception:
+        # fail safe: no crash, but a clear message
+        return {
+            "summary": "I could not read the list of installed applications on this system.",
+            "items": [],
+        }
 
     cleaned = sorted(
-        {
-            _clean_name(app["name"])
-            for app in apps.values()
-            if not _is_system_app(app["name"])
-        }
+        _clean_name(app["name"])
+        for app in apps.values()
+        if not _is_system_app(app["name"])
     )
 
     return {
         "summary": f"There are {len(cleaned)} installed applications.",
-        "items": cleaned
+        "items": cleaned,
     }
+
 
 
 def refresh_applications() -> str:

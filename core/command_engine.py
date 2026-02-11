@@ -200,8 +200,37 @@ def process_command(text: str) -> Dict:
 
     if intent == "LIST_ALARMS":
         return {"type": "list_alarms"}
+    
+
+
+    # ---------- SYSTEM / NETWORK / PERFORMANCE / BATTERY ----------
+    if intent == "SYSTEM_STATUS":
+        return {"type": "get_system_status"}
+
+    if intent == "NETWORK_STATUS":
+        return {"type": "get_network_status"}
+
+    if intent == "PERFORMANCE_STATUS":
+        return {"type": "get_performance_status"}
+
+    if intent == "BATTERY_STATUS":
+        return {"type": "get_battery_status"}
+    
+        # ---------- SCREEN / VISION ----------
+    if intent == "DESCRIBE_SCREEN":
+        return {"type": "describe_screen"}
+
+    if intent == "READ_SCREEN_TEXT":
+        return {"type": "read_screen_text"}
+
+    if intent == "FOREGROUND_WINDOW_INFO":
+        return {"type": "foreground_window_info"}
+
+
 
     return {"type": "unknown"}
+
+
 
 
 

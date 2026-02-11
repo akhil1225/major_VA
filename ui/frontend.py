@@ -188,6 +188,15 @@ class OrbitOS(QWidget):
        
         self.controller = AssistantController()
 
+
+        # Connect controller's Qt signal to our own signal
+        self.controller.bridge.voiceResult.connect(
+            lambda heard, reply: self.voiceResult.emit(heard, reply)
+        )
+
+        # self.voiceResult.connect(self._on_voice_result)
+
+
        
         self.controller.on_state_change = lambda s: self.ui_safe(
             lambda: self.on_state_change(s)
@@ -287,13 +296,15 @@ class OrbitOS(QWidget):
 
 
     def _on_voice_result(self, heard: str, reply: str):
+
         if not heard:
             self.add_user_message("[Voice] Could not understand.")
-            return
+        else:
+            self.add_user_message(f"[Voice] {heard}")
 
-        self.add_user_message(f"[Voice] {heard}")
         if reply:
             self.add_assistant_message(reply)
+
 
     def _pulse_visualizer(self, duration_ms: int = 1800):
         # start immediately
@@ -427,17 +438,16 @@ class OrbitOS(QWidget):
 
     def run_voice(self):
         self.controller.pause_wake_word()
-
         self._pulse_visualizer()
 
         def voice_callback(heard, reply):
             print("VOICE CALLBACK RAW:", heard, "||", reply)
-            # emit to UI thread; Qt delivers this on the main thread
-            self.voiceResult.emit(heard or "", reply or "")
-            # resume wake word also from UI thread
+            # emit through controller bridge (same as wake word)
+            self.controller.bridge.voiceResult.emit(heard or "", reply or "")
             QTimer.singleShot(0, self.controller.resume_wake_word)
 
         self.controller.handle_voice_command_async(voice_callback)
+
 
 
   

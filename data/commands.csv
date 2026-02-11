@@ -725,3 +725,82 @@ list my alarms,LIST_ALARMS
 what are my alarms,LIST_ALARMS
 alarms status,LIST_ALARMS
 alarm status,LIST_ALARMS
+
+
+read the text on my screen,READ_SCREEN_TEXT
+read this screen for me,READ_SCREEN_TEXT
+read everything on the screen,READ_SCREEN_TEXT
+tell me the text visible on my desktop,READ_SCREEN_TEXT
+read the words that are on the screen now,READ_SCREEN_TEXT
+read the content of this window,READ_SCREEN_TEXT
+read what is written on the screen,READ_SCREEN_TEXT
+read out the text you see,READ_SCREEN_TEXT
+read the text from the current screen,READ_SCREEN_TEXT
+read the words on my monitor,READ_SCREEN_TEXT
+read aloud what is on the screen,READ_SCREEN_TEXT
+please read what is displayed,READ_SCREEN_TEXT
+read the visible text to me,READ_SCREEN_TEXT
+can you read the text on this page,READ_SCREEN_TEXT
+read all the text you can see,READ_SCREEN_TEXT
+read the text in the active window,READ_SCREEN_TEXT
+read the screen contents line by line,READ_SCREEN_TEXT
+tell me what text is on the screen,READ_SCREEN_TEXT
+read whatever text is showing now,READ_SCREEN_TEXT
+read the labels and text you see,READ_SCREEN_TEXT
+read out the words from my screen,READ_SCREEN_TEXT
+read the current window contents,READ_SCREEN_TEXT
+read this whole screen aloud,READ_SCREEN_TEXT
+read the written content on my screen,READ_SCREEN_TEXT
+read any text you can detect,READ_SCREEN_TEXT
+
+what is on my screen,DESCRIBE_SCREEN
+describe my screen,DESCRIBE_SCREEN
+describe what you see on the screen,DESCRIBE_SCREEN
+what do you see on my desktop,DESCRIBE_SCREEN
+tell me what is open on the screen,DESCRIBE_SCREEN
+what windows are visible right now,DESCRIBE_SCREEN
+give me a summary of the current screen,DESCRIBE_SCREEN
+describe the current window layout,DESCRIBE_SCREEN
+explain what is shown on the screen,DESCRIBE_SCREEN
+what is being displayed on my monitor,DESCRIBE_SCREEN
+tell me what is on the rest of the screen,DESCRIBE_SCREEN
+what is on the desktop besides you,DESCRIBE_SCREEN
+describe the applications I have open,DESCRIBE_SCREEN
+tell me what programs are visible,DESCRIBE_SCREEN
+what does the desktop look like now,DESCRIBE_SCREEN
+give an overview of my screen,DESCRIBE_SCREEN
+what can you see on my screen right now,DESCRIBE_SCREEN
+describe everything you can see on the screen,DESCRIBE_SCREEN
+summarize the contents of my screen,DESCRIBE_SCREEN
+tell me what is shown in the background,DESCRIBE_SCREEN
+what is currently shown on the display,DESCRIBE_SCREEN
+describe the main window on the screen,DESCRIBE_SCREEN
+how does my desktop look at the moment,DESCRIBE_SCREEN
+explain what is open on my desktop,DESCRIBE_SCREEN
+describe what is on my monitor right now,DESCRIBE_SCREEN
+
+which window is active right now,FOREGROUND_WINDOW_INFO
+what application is in front,FOREGROUND_WINDOW_INFO
+which app is currently active,FOREGROUND_WINDOW_INFO
+tell me the active window,FOREGROUND_WINDOW_INFO
+what is the current foreground window,FOREGROUND_WINDOW_INFO
+which program has focus now,FOREGROUND_WINDOW_INFO
+what application am I using right now,FOREGROUND_WINDOW_INFO
+which window is in focus,FOREGROUND_WINDOW_INFO
+what is the topmost window on my screen,FOREGROUND_WINDOW_INFO
+which app is on top right now,FOREGROUND_WINDOW_INFO
+which window is currently selected,FOREGROUND_WINDOW_INFO
+which program is currently in use,FOREGROUND_WINDOW_INFO
+what is the active application at the moment,FOREGROUND_WINDOW_INFO
+which window is in front of everything,FOREGROUND_WINDOW_INFO
+which software is open in the foreground,FOREGROUND_WINDOW_INFO
+what is the title of the active window,FOREGROUND_WINDOW_INFO
+tell me which app has the focus,FOREGROUND_WINDOW_INFO
+which window am I currently working in,FOREGROUND_WINDOW_INFO
+which application is currently on the screen,FOREGROUND_WINDOW_INFO
+what is the main window right now,FOREGROUND_WINDOW_INFO
+which window is currently highlighted,FOREGROUND_WINDOW_INFO
+which program is on the front screen,FOREGROUND_WINDOW_INFO
+what window do you see in the foreground,FOREGROUND_WINDOW_INFO
+tell me the name of the active program,FOREGROUND_WINDOW_INFO
+which application window is active right now,FOREGROUND_WINDOW_INFO

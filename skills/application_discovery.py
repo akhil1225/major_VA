@@ -20,18 +20,21 @@ class ApplicationDiscovery:
 
     def get_installed_apps(self) -> Dict[str, Dict]:
         now = time.time()
-
         if now - self._last_scan < CACHE_TTL_SECONDS and self._cache:
             return self._cache
 
         apps: Dict[str, Dict] = {}
-
-        self._discover_win32(apps)
-        self._discover_uwp(apps)
+        try:
+            self._discover_win32(apps)
+            self._discover_uwp(apps)
+        except Exception:
+            # log or ignore, but don't crash the app
+            pass
 
         self._cache = apps
         self._last_scan = now
         return apps
+
 
     def refresh(self) -> Dict[str, Dict]:
         self._cache = {}

@@ -9,6 +9,8 @@ from core.speech_engine import speak
 from core.wakeword_engine import WakeWordEngine
 from core.dialog_state import DialogState, PendingAction
 
+
+from skills.system_state import SystemState
 from skills import file_control
 from skills import application_control
 from skills.file_control import get_base_dir, set_base_dir
@@ -18,8 +20,14 @@ from skills import power_control
 from skills import alarm_control
 from core.time_parser import extract_time
 from skills import alarm_control
+from skills import screen_analyzer
 
-from PySide6.QtCore import QTimer  # type: ignore
+from PySide6.QtCore import QTimer, QObject, Signal  # type: ignore
+
+
+class VoiceBridge(QObject):
+    voiceResult = Signal(str, str)
+
 
 
 class AssistantController:
@@ -36,6 +44,12 @@ class AssistantController:
         self.on_speaking_end: Optional[Callable[[], None]] = None
         self.on_directory_change: Optional[Callable[[], None]] = None
         self.on_user_input: Optional[Callable[[str], None]] = None
+
+        self.system_state = SystemState()
+
+        self.bridge = VoiceBridge()
+
+        # self.on_voice_result: Optional[Callable[[Optional[str], Optional[str]], None]] = None
 
         self._busy = False
         self._input_source = "voice"
@@ -88,15 +102,26 @@ class AssistantController:
                 text = listen_once()
                 if not text:
                     self._speak("I did not catch that.")
+                    # emit empty heard/reply so UI can show a bubble if it wants
+                    self.bridge.voiceResult.emit("", "")
                     return
+
                 self._input_source = "voice"
+
+                before = self.last_spoken
                 self._handle_command(text)
-                
+                reply = self.last_spoken if self.last_spoken != before else ""
+
+                # emit exactly like run_voice does
+                self.bridge.voiceResult.emit(text, reply)
             finally:
                 self._busy = False
                 self._set_state("idle")
 
         threading.Thread(target=worker, daemon=True).start()
+
+
+
 
     def pause_wake_word(self):
         if self.wake_engine:
@@ -292,6 +317,21 @@ class AssistantController:
         if rtype == "unmute_volume":
             self._speak(volume_control.unmute())
             return
+        
+
+                # ---------- POWER CONTROL ----------
+        if rtype == "shutdown_system":
+            self._speak(power_control.shutdown_system())
+            return
+
+        if rtype == "restart_system":
+            self._speak(power_control.restart_system())
+            return
+
+        if rtype == "sleep_system":
+            self._speak(power_control.sleep_system())
+            return
+
 
     
         if rtype == "set_alarm":
@@ -315,6 +355,66 @@ class AssistantController:
         if rtype == "get_alarm":
             self._speak(alarm_control.get_alarm_status())
             return
+        
+                # ---------- SYSTEM / NETWORK / PERFORMANCE / BATTERY ----------
+        if rtype == "get_system_status":
+            self.system_state.refresh()
+            self._speak(self.system_state.summary())
+            return
+
+        if rtype == "get_network_status":
+            self.system_state.refresh()
+            if self.system_state.online:
+                self._speak("You are connected to the internet.")
+            else:
+                self._speak("You are currently offline.")
+            return
+
+        if rtype == "get_performance_status":
+            self.system_state.refresh()
+            cpu = self.system_state.cpu
+            mem = self.system_state.memory["percent"]
+            self._speak(
+                f"CPU usage is {cpu:.0f} percent and memory usage is {mem:.0f} percent."
+            )
+            return
+
+        if rtype == "get_battery_status":
+            self.system_state.refresh()
+            # simple battery summary using system_info directly
+            b = self.system_state.battery
+            if not b.get("available"):
+                self._speak("Battery information is not available on this system.")
+            else:
+                percent = b.get("percent", 0)
+                plugged = b.get("plugged_in", False)
+                if plugged:
+                    self._speak(
+                        f"Battery is at {percent:.0f} percent and charging."
+                    )
+                else:
+                    self._speak(
+                        f"Battery is at {percent:.0f} percent and running on battery power."
+                    )
+            return
+        
+                # ---------- SCREEN / VISION ----------
+        if rtype == "describe_screen":
+            description = screen_analyzer.describe_current_screen()
+            self._speak(description)
+            return
+
+        if rtype == "read_screen_text":
+            screen_text = screen_analyzer.read_screen_text()
+            self._speak(screen_text)
+            return
+
+        if rtype == "foreground_window_info":
+            info = screen_analyzer.get_foreground_window_info()
+            self._speak(info)
+            return
+
+
 
 
         self._speak("Please try again,  akhil")
