@@ -3,8 +3,8 @@
 import requests
 import time
 
-# Put your OpenWeatherMap API key here
-OPENWEATHER_API_KEY = "941aab2fb75f3c6c2eb46f79ff98748f"
+
+OPENWEATHER_API_KEY = "PUT YOUR OPENWEATHERMAP API HERE"
 
 
 def get_weather(city: str) -> str:
