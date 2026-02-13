@@ -26,7 +26,6 @@ def _split_into_sentences(text: str):
 
 def _speech_worker():
     pythoncom.CoInitialize()
-
     try:
         speaker = win32com.client.Dispatch("SAPI.SpVoice")
 
@@ -48,16 +47,17 @@ def _speech_worker():
 
             for sentence in sentences:
                 if _stop_flag.is_set():
-                    speaker.Speak("", 3) 
+                    # flush current speech immediately
+                    speaker.Speak("", 3)  # SVSFPurgeBeforeSpeak
                     break
 
-                
                 speaker.Speak(sentence, 0)
 
             _speech_queue.task_done()
 
     finally:
         pythoncom.CoUninitialize()
+
 
 
 _thread = threading.Thread(target=_speech_worker, daemon=True)
@@ -72,9 +72,6 @@ def speak(text: str):
 
 
 def stop_speaking():
-    """
-    Immediately stops current speech.
-    """
     _stop_flag.set()
 
     # Flush pending speech
@@ -84,6 +81,7 @@ def stop_speaking():
             _speech_queue.task_done()
         except queue.Empty:
             break
+
 
 
 def toggle_mute() -> bool:
@@ -99,3 +97,4 @@ def toggle_mute() -> bool:
 def replay_last():
     if _last_spoken_text:
         speak(_last_spoken_text)
+

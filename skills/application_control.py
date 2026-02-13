@@ -125,7 +125,7 @@ def list_installed_applications():
     try:
         apps = _discovery.get_installed_apps()
     except Exception:
-        # fail safe: no crash, but a clear message
+      
         return {
             "summary": "I could not read the list of installed applications on this system.",
             "items": [],

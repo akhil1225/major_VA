@@ -804,3 +804,55 @@ which program is on the front screen,FOREGROUND_WINDOW_INFO
 what window do you see in the foreground,FOREGROUND_WINDOW_INFO
 tell me the name of the active program,FOREGROUND_WINDOW_INFO
 which application window is active right now,FOREGROUND_WINDOW_INFO
+
+what is the weather,WEATHER_STATUS
+tell me the weather,WEATHER_STATUS
+how is the weather today,WEATHER_STATUS
+what is the temperature,WEATHER_STATUS
+check the weather,WEATHER_STATUS
+show me the weather,WEATHER_STATUS
+give me the weather report,WEATHER_STATUS
+weather status,WEATHER_STATUS
+today weather,WEATHER_STATUS
+current weather,WEATHER_STATUS
+what is the weather forecast,WEATHER_STATUS
+tell me todays temperature,WEATHER_STATUS
+how hot is it today,WEATHER_STATUS
+how cold is it today,WEATHER_STATUS
+is it raining,WEATHER_STATUS
+is it sunny outside,WEATHER_STATUS
+how is the climate today,WEATHER_STATUS
+what is the outside temperature,WEATHER_STATUS
+check temperature,WEATHER_STATUS
+update me on weather,WEATHER_STATUS
+give me current weather,WEATHER_STATUS
+tell me local weather,WEATHER_STATUS
+today climate,WEATHER_STATUS
+current forecast,WEATHER_STATUS
+what is the weather like,WEATHER_STATUS
+
+search on wikipedia,WIKI_SEARCH
+search wikipedia,WIKI_SEARCH
+look it up on wikipedia,WIKI_SEARCH
+open wikipedia search,WIKI_SEARCH
+wikipedia search,WIKI_SEARCH
+check wikipedia,WIKI_SEARCH
+get information from wikipedia,WIKI_SEARCH
+find details on wikipedia,WIKI_SEARCH
+look on wikipedia,WIKI_SEARCH
+show me wikipedia,WIKI_SEARCH
+search this on wikipedia,WIKI_SEARCH
+look that up on wikipedia,WIKI_SEARCH
+get summary from wikipedia,WIKI_SEARCH
+wikipedia lookup,WIKI_SEARCH
+check this in wikipedia,WIKI_SEARCH
+look it up in wikipedia,WIKI_SEARCH
+refer wikipedia,WIKI_SEARCH
+see wikipedia,WIKI_SEARCH
+consult wikipedia,WIKI_SEARCH
+go to wikipedia,WIKI_SEARCH
+use wikipedia,WIKI_SEARCH
+get answer from wikipedia,WIKI_SEARCH
+find on wikipedia,WIKI_SEARCH
+wikipedia query,WIKI_SEARCH
+search topic on wikipedia,WIKI_SEARCH

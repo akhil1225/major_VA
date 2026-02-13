@@ -2,13 +2,15 @@ import threading
 from typing import Callable, Optional
 
 import os
+from pathlib import Path
 
 from core.command_engine import process_command
 from core.voice_engine import listen_once
 from core.speech_engine import speak
 from core.wakeword_engine import WakeWordEngine
 from core.dialog_state import DialogState, PendingAction
-
+from core.ai_chat_store import AIChatStore
+from core.llm_client import LLMClient
 
 from skills.system_state import SystemState
 from skills import file_control
@@ -21,12 +23,15 @@ from skills import alarm_control
 from core.time_parser import extract_time
 from skills import alarm_control
 from skills import screen_analyzer
+from skills import wiki_skill, weather_skill
 
 from PySide6.QtCore import QTimer, QObject, Signal  # type: ignore
 
 
 class VoiceBridge(QObject):
     voiceResult = Signal(str, str)
+
+    
 
 
 
@@ -45,9 +50,12 @@ class AssistantController:
         self.on_directory_change: Optional[Callable[[], None]] = None
         self.on_user_input: Optional[Callable[[str], None]] = None
 
+        self._working_dir = Path.cwd()
+        self.ai_store = AIChatStore(self._working_dir)
         self.system_state = SystemState()
 
         self.bridge = VoiceBridge()
+        self.llm = LLMClient()
 
         # self.on_voice_result: Optional[Callable[[Optional[str], Optional[str]], None]] = None
 
@@ -83,6 +91,21 @@ class AssistantController:
                 self.on_speaking_end()
 
         threading.Thread(target=worker, daemon=True).start()
+
+    
+    def run_ai_chat(self, chat_id: str, user_text: str, model: str | None = None) -> str:
+        chat = self.ai_store.get_chat(chat_id)
+        if not chat:
+            raise ValueError("Unknown chat id")
+
+        # append user message
+        self.ai_store.add_message(chat_id, "user", user_text)
+        # build full history for LLM
+        messages = [{"role": m.role, "content": m.content} for m in chat.messages]
+        reply = self.llm.chat(messages, model=model)
+        # save assistant reply
+        self.ai_store.add_message(chat_id, "assistant", reply)
+        return reply
 
 
 
@@ -406,12 +429,35 @@ class AssistantController:
 
         if rtype == "read_screen_text":
             screen_text = screen_analyzer.read_screen_text()
+            if callable(self.on_message) and screen_text:
+                self.on_message(screen_text)
+
             self._speak(screen_text)
+
+            # self.last_spoken = screen_text
             return
 
         if rtype == "foreground_window_info":
             info = screen_analyzer.get_foreground_window_info()
             self._speak(info)
+            return
+        
+                # ---------- KNOWLEDGE / WEB ----------
+                # ---------- KNOWLEDGE / WEB ----------
+        if rtype == "weather_status":
+            city = result.get("city", "").strip()
+            if not city:
+                # if user said just "what is the weather", ask again or use a default
+                self._speak("Please tell me the city name.")
+                return
+            reply = weather_skill.get_weather(city)
+            self._speak(reply)
+            return
+
+        if rtype == "wiki_search":
+            topic = result.get("query", "").strip() or text
+            summary = wiki_skill.wikipedia_summary(topic)
+            self._speak(summary)
             return
 
 
@@ -465,6 +511,9 @@ class AssistantController:
 
     def set_working_directory(self, path: str):
         set_base_dir(path)
+
+        self._working_dir = Path(path)
+        self.ai_store =AIChatStore(self._working_dir)
         if callable(self.on_directory_change):
             self.on_directory_change()
 

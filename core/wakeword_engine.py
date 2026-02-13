@@ -1,12 +1,10 @@
-# core/wakeword_engine.py
 
 import threading
 import time
 from typing import Callable, cast
 
-import speech_recognition as sr  # type: ignore
+import speech_recognition as sr  #type:ignore
 
-# You can say any of these
 WAKE_WORDS = ["orbit", "hey orbit", "ok orbit"]
 
 
@@ -24,6 +22,11 @@ class WakeWordEngine:
         self._running = False
         self._thread: threading.Thread | None = None
 
+       
+        self.recognizer.dynamic_energy_threshold = True
+       
+        self.recognizer.energy_threshold = 200
+
     def start(self):
         if self._running:
             return
@@ -38,43 +41,61 @@ class WakeWordEngine:
         self._running = False
 
     def _listen_loop(self):
-        with self.microphone as source:
-            # One‑time calibration to the room noise
-            self.recognizer.adjust_for_ambient_noise(source, duration=1.0)
-            print("WakeWordEngine listening for wake word...")
+        while self._running:
+            try:
+                with self.microphone as source:
+                    # Re‑calibrate each time we successfully open a stream
+                    self.recognizer.adjust_for_ambient_noise(source, duration=0.6)
+                    print("WakeWordEngine listening for wake word...")
 
-            while self._running:
-                try:
-                    audio = self.recognizer.listen(
-                        source,
-                        timeout=None,
-                        phrase_time_limit=3,
-                    )
+                    while self._running:
+                        try:
+                            audio = self.recognizer.listen(
+                                source,
+                                timeout=None,
+                                phrase_time_limit=4,
+                            )
 
-                    recognizer = cast(sr.Recognizer, self.recognizer)
-                    try:
-                        text = recognizer.recognize_google(audio, language="en-IN")
-                    except sr.UnknownValueError:
-                        continue
-                    except sr.RequestError:
-                        # Network / API error – wait and continue
-                        time.sleep(1.0)
-                        continue
+                            recognizer = cast(sr.Recognizer, self.recognizer)
+                            try:
+                                text = recognizer.recognize_google(
+                                    audio,
+                                    language="en-IN",
+                                )
+                            except sr.UnknownValueError:
+                                continue
+                            except sr.RequestError:
+                                time.sleep(1.0)
+                                continue
 
-                    text = text.lower().strip()
-                    if not text:
-                        continue
+                            text = (text or "").lower().strip()
+                            if not text:
+                                continue
 
-                    print("Things heard:", text)
+                            print("Things heard:", text)
 
-                    if self._contains_wake_word(text):
-                        print(f"Wake word detected in: '{text}'")
-                        self.on_wake_callback()
-                        time.sleep(1.0)  # prevent double trigger
+                            if self._contains_wake_word(text):
+                                print(f"Wake word detected in: '{text}'")
+                                self.on_wake_callback()
+                                time.sleep(1.2)
 
-                except Exception:
-                    # Ignore random mic / timing errors and keep listening
-                    continue
+                        except OSError as e:
+                            if e.errno == -9988:
+                                print("WakeWordEngine: audio stream closed, will recreate mic.")
+                                break  # break inner loop, re‑open mic in outer loop
+                            else:
+                                print("WakeWordEngine OS error:", repr(e))
+                                continue
+                        except Exception as e:
+                            print("WakeWordEngine error:", repr(e))
+                            continue
+
+            except Exception as e:
+                # Errors when opening the microphone itself; wait and retry
+                print("WakeWordEngine mic open error:", repr(e))
+                time.sleep(1.0)
+                continue
+
 
     def _contains_wake_word(self, text: str) -> bool:
         """
@@ -83,7 +104,6 @@ class WakeWordEngine:
         """
         t = text.lower()
 
-        # Exact phrases
         for wake in WAKE_WORDS:
             if wake in t:
                 return True
@@ -92,10 +112,26 @@ class WakeWordEngine:
         if "orbit" in words:
             return True
 
-        # Very small fuzzy matching: common variants for 'orbit'
-        fuzzy_bits = ["or bit", "or but", "hobbit", "orbit.", "orbit,"]
+    
+        fuzzy_bits = [
+            "or bit",
+            "or but",
+            "hobbit",
+            "orbit.",
+            "orbit,",
+            "orbit!",
+            "orbit?",
+            "hey orbit.",
+            "hey orbit,",
+            "ok orbit.",
+            "ok orbit,",
+        ]
         for fb in fuzzy_bits:
             if fb in t:
                 return True
+
+
+        if t.startswith("orbit ") or t.startswith("hey orbit ") or t.startswith("ok orbit "):
+            return True
 
         return False

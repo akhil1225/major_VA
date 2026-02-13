@@ -34,6 +34,42 @@ def extract_folder_name(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def extract_wiki_query(text: str) -> str:
+    """
+    Extract the topic to search on Wikipedia from the user's sentence.
+    """
+    original = text.strip()
+    lower = original.lower()
+
+    patterns = [
+        "search wikipedia for",
+        "search wikipedia about",
+        "search wikipedia",
+        "wikipedia article on",
+        "wikipedia article about",
+        "wikipedia article for",
+        "wikipedia page for",
+        "wikipedia page about",
+        "wikipedia page on",
+        "wikipedia entry for",
+        "wikipedia entry about",
+        "wikipedia entry on",
+        "according to wikipedia",
+        "on wikipedia",
+        "from wikipedia",
+    ]
+
+    for p in patterns:
+        if p in lower:
+            after = original.lower().split(p, 1)[1].strip()
+            return after or original
+
+    # Fallback: remove the word "wikipedia" itself
+    cleaned = lower.replace("wikipedia", "").strip()
+    return cleaned or original
+
+
+
 
 # ---------------- FILENAME EXTRACTION ----------------
 def extract_filename(text: str) -> str:
@@ -85,6 +121,18 @@ def extract_app_name(text: str) -> str:
         text
     )
     return re.sub(r"\s+", " ", text).strip()
+
+def extract_city(text: str) -> str:
+    """
+    Very simple city extractor from a weather sentence.
+    Takes everything after 'in' or 'at' if present; else returns empty string.
+    """
+    lower = text.lower()
+    for kw in [" in ", " at "]:
+        if kw in lower:
+            return text.split(kw, 1)[1].strip()
+    return ""
+
 
 
 # ---------------- INTENT PREDICTION ----------------
@@ -225,7 +273,19 @@ def process_command(text: str) -> Dict:
 
     if intent == "FOREGROUND_WINDOW_INFO":
         return {"type": "foreground_window_info"}
-
+    
+        # ---------- KNOWLEDGE / WEB ----------
+    if intent == "WIKI_SEARCH":
+        return {
+            "type": "wiki_search",
+            "query": extract_wiki_query(text),
+        }
+    
+    if intent == "WEATHER_STATUS":
+        return {
+            "type": "weather_status",
+            "city": extract_city(text),
+        }
 
 
     return {"type": "unknown"}
