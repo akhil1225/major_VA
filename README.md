@@ -226,7 +226,7 @@ This will generate:
 Start the intelligent agent using:
 
 ```bash
-python main.py
+ uvicorn server:app --reload --port 8000
 ```
 
 Once running, the assistant accepts:
